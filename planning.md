@@ -10,3 +10,23 @@ OOPS is being developed as a part of an on-going project to build a unified part
 management system (yet to be published). Its goal is to be a standard description for electronic
 parts. Thus, it shall describe the important parameters of any given part, and leave room for an
 application to add its own application specific parameters.
+
+
+Conceptual syntax
+
+```json
+part {
+    part_number = "XYZ123",
+    type = "Capacitor",
+    tags = {
+        "Tantalum",
+        "SMD"
+    },
+    parameters = {
+        // Values required by capacitor, tantalum, and SMD specs
+    },
+    user = {
+        // Application specific parameters
+    }
+}
+```
