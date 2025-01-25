@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Capacitor",
+        "parameters": {
+            "Capacitance": "Farad",
+            "Rated Voltage": "Volt"
+        }
+    }
+]
