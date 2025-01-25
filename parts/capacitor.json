@@ -1,0 +1,72 @@
+{
+
+    "title" : "Capacitor",
+    "description" : "the part description for a capacitor",
+    "type" : "object",
+    "properties" : {   
+        "Capacitance": {
+            "description": "the capacitance of the capacitor unit : Farads",
+            "type" : "number"
+        },
+        "Tolerance" : {
+            "description": "the percentage tolerance of capacitor unit : %",
+            "type" : "number"
+        },
+        "Rated-voltage": {
+            "description": "the rated volatage of the capacitor unit : volts",
+            "type" : "number"
+        },
+        "Max-voltage": {
+            "description": "the max volatage of the capacitor unit : volts",
+            "type" : "number"
+        },
+        "Operating-Temperature" : {
+            "type": "object",
+            "properties": {
+              "min": {
+                "description" : "the minimum operating temperature units : c",
+                "type": "number"
+              },
+              "max": {
+                "description" : "the maximum operating temperature units : c",
+                "type": "number"
+              }
+            },
+            "required": [ "min", "max" ]
+        },
+        "Temp-Coefficient" : {
+            "description": "the temp coefficient of the capacitor using Class 2 per EIA RS-198 standard",
+            "type" : "string",
+            "pattern" : "^([XYZ][456789][PRSTUV])"
+        },
+        "Failure-rate" : {
+            "description" : "the failure rate \n-\tM : 1%, \n-\tP : 0.1%, \n-\tR : 0.01%, \n-\tS : 0.001%",
+            "type": "string",
+            "enum" : [
+                "M",
+                "P",
+                "R",
+                "S"
+            ]
+        },
+        "type" : {
+            "description" : "the type of the capacitor",
+            "type": "string",
+            "enum" : [
+                "Fixed",
+                "Mica",
+                "Paper",
+                "Ceramic",
+                "Electrolytic",
+                "Tantalum",
+                "Film",
+                "Thin-Film",
+                "Polyester",
+                "Aluminum"
+            ]
+        }
+    },
+    "required" : [
+        "Capacitance"
+    ]
+}

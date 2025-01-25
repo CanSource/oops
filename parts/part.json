@@ -1,0 +1,62 @@
+{
+
+    "title" : "Part",
+    "description" : "the part description for a general part",
+    "type" : "object",
+    "properties" : { 
+        "v" : {
+            "description": "Version number for the oops format",
+            "type" : "string",
+            "pattern" : "^(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$"
+        },
+        
+        "part_number" : {
+            "description": "Part number / manufacturing number for the given part",
+            "type" : "string"
+        },
+        
+        "type" : {
+            "description": "the type of the part as defined in parts",
+            "type" : "string"
+        },
+        
+        "package" : {
+            "description": "the physical packaging for the part i.e. \"0603\"",
+            "type" : "string"
+        },
+
+        "tags" : {
+            "description": "Additional information/sub-types",
+            "type" : "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        
+        "parameters" : {
+            "description": "Part-specific information. The type, package, and tags specify what information is expected here",
+            "type" : "object"
+        },
+
+        "datasheets" : {
+            "description": "an array of strings for location of the datasheets",
+            "type" : "array",
+            "items" : {
+                "type": "string"
+            }
+        },
+
+        "suppliers" : {
+            "description": "an array of strings for location of suppliers",
+            "type" : "array",
+            "items" : {
+                "type": "string"
+            }
+        },
+        
+        "custom_data" : {
+            "description": "User defined data, this is useful if you want your application to use things like custom images for your parts, or have notes for each of them It is suggested each app uses its own name space for custom data to avoid clashes ",
+            "type" : "object"
+        }
+    }
+}

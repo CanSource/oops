@@ -1,0 +1,67 @@
+{
+    "title" : "Resistor",
+    "description" : "the part description for a resistor",
+    "type" : "object",
+    "properties" : {   
+        "Resistance" : {
+            "description": "the resistance of the resistor unit : ohms",
+            "type" : "number"
+        },
+        "Tolerance" : {
+            "description": "the percentage tolerance of resistor unit : %",
+            "type" : "number"
+        },
+        "Power" : {
+            "description": "the max power dissipating of the resistor in unit : watts",
+            "type" : "number"
+        },
+        "Temperature-Coefficient" : {
+            "description": "specific resistance with change of temperature unit : ppm/c",
+            "type" : "number"
+        },
+        "Operating-Temperature" : {
+            "type": "object",
+            "properties": {
+              "min": {
+                "description" : "the minimum operating temperature units : c",
+                "type": "number"
+              },
+              "max": {
+                "description" : "the maximum operating temperature units : c",
+                "type": "number"
+              }
+            },
+            "required": [ "min", "max" ]
+        },
+        "Composition" : {
+            "description" : "the composition of the resistor",
+            "type": "string",
+            "enum" : [
+                "Carbon-composition",
+                "Carbon-film",
+                "ceramic",
+                "metal-element",
+                "metal-film",
+                "metal-foil",
+                "thick-film",
+                "thin-film",
+                "metal-oxide",
+                "wire-wound",
+                "fusible"
+            ]
+        },
+        "Failure-rate" : {
+            "description" : "the failure rate \n-\tM : 1%, \n-\tP : 0.1%, \n-\tR : 0.01%, \n-\tS : 0.001%",
+            "type": "string",
+            "enum" : [
+                "M",
+                "P",
+                "R",
+                "S"
+            ]
+        }
+    },
+    "required" : [
+        "Resistance"
+    ]
+}

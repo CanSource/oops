@@ -1,0 +1,98 @@
+{
+    "title" : "Diode",
+    "description" : "the part description for a Diode",
+    "type" : "object",
+    "properties" : {   
+        "Reverse" : {
+            "description": "the reverse voltage of the diode unit : volt",
+            "type" : "number"
+        },
+        "current" : {
+            "description": "the average rectified current of the diode unit : volt",
+            "type" : "number"
+        },
+        "Capacitance" : {
+            "description": "the capacitance of the diode at a given voltage and frequency",
+            "type" : "object",
+            "properties" : {  
+                "Capacitance" : {
+                    "description" : "Farad",
+                    "type" : "number"
+                },
+                "Reverse" : {
+                    "description" : "volt",
+                    "type" : "number"
+                },
+                "freq" : {
+                    "description" : "hertz",
+                    "type" : "number"
+                }
+            },
+            "required" : ["Capacitance", "Reverse", "freq"] 
+        },
+        "Forward" : {
+            "description": "the diodes foward voltage at a given current",
+            "type" : "object",
+            "properties" : {  
+                "Voltage" : {
+                    "description" : "Volt",
+                    "type" : "number" 
+                },
+                "current" : {
+                    "description" : "Amps",
+                    "type" : "number" 
+                } 
+            },
+            "required" : ["Voltage"] 
+        },
+        "speed" : {
+            "description": "the recovery speed of the diode unit : s",
+            "type" : "number"
+        },
+        "Reverse-recovery-time" : {
+            "description": "the recovery time of the diode unit : s",
+            "type" : "number"
+        },
+        "Reverse-leakage" : {
+            "description": "the diodes Reverse current leakage at a voltage",
+            "type" : "object",
+            "properties" : {  
+                "Voltage" : {
+                    "description" : "Volt",
+                    "type" : "number" 
+                },
+                "current" : {
+                    "description" : "Amps",
+                    "type" : "number" 
+                } 
+            },
+            "required" : ["Amps"] 
+        },
+        "Operating-Temperature" : {
+            "type": "object",
+            "properties": {
+              "min": {
+                "description" : "the minimum operating temperature units : c",
+                "type": "number"
+              },
+              "max": {
+                "description" : "the maximum operating temperature units : c",
+                "type": "number"
+              }
+            },
+            "required": [ "min", "max" ]
+        },
+        "type" : {
+            "description" : "the type of the diode",
+            "type" : "string",
+            "enum" : [
+                "junction",
+                "zener",
+                "tunnel",
+                "schottky",
+                "varactor" 
+            ] 
+        }
+    },
+    "required" : []
+}

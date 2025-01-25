@@ -1,0 +1,64 @@
+{
+    "title" : "Inductor",
+    "description" : "the part description for a Inductor",
+    "type" : "object",
+    "properties" : {   
+        "Inductance" : {
+            "description": "the inductance of the inductor unit : Herny",
+            "type" : "number"
+        },
+        "Tolerance" : {
+            "description": "the percentage tolerance of inductor unit : %",
+            "type" : "number"
+        },
+        "current" : {
+            "description": "the current rating of the inductor unit : Amps",
+            "type" : "number"
+        },
+        "Saturation" : {
+            "description": "the saturation current of the inductor unit : Amps",
+            "type" : "number"
+        },
+        "Shielding" : {
+            "description": "what shielding the inductor has",
+            "type" : "string",
+            "enum" : [
+            "Semi-Shielded",
+            "Shielded",
+            "Unshielded"
+            ]
+        }, 
+        "core-material" : {
+            "description": "the core material of inductor",
+            "type" : "string",
+            "enum" : [
+                "unknown",
+                "air",
+                "alloy",
+                "alloy-powder",
+                "alumina",
+                "carbonyl-powder",
+                "ceramic",
+                "ceramic-ferrite",
+                "ceramic-no-magnetic",
+                "ferrite",
+                "high-saturation",
+                "iron",
+                "iron-alloy",
+                "iron-powder",
+                "magnetic-powder",
+                "MnZn",
+                "Metal",
+                "Metal-Composite",
+                "MPP",
+                "Nickle-iron",
+                "NiZn",
+                "non-magnetic",
+                "phenolic",
+                "polymer",
+                "sendust"
+            ]
+        }
+    },
+    "required" : ["Inductance"]
+}
