@@ -14,24 +14,71 @@ application to add its own application specific parameters.
 
 Conceptual syntax
 
-```jsonc 
-// part
+```json
 {
-    "part_number" : "XYZ123",
-    "type" : "Capacitor",
+    // Version number for the oops format
+    "v" : "0.0.3",
+    // Part number / manufacturing number
+    "part_number" : "STM32G4",
+    // this are the sub types of the capacitor
+    // this is added as Tantalum Capacitors 
+    // will have addtional information when 
+    // compared to something like an electrolytic
+    // capacitor
+    // these tags can also be used for searching.
+    "type" : "Micro-Controller",
+    "package" : "QFN64",
     "tags" : [
-        "Tantalum",
-        "SMD",
+        "3v3",
+        "i2c",
+        "usart",
+        "spi",
+        "ADC",
+        "DACs",
+        "GPIOs",
     ],
     "parameters" : {
-        // Values required by capacitor, tantalum, and SMD specs
-        "capacitance" : 1e-6, // micro farad
-        ...
+        "Micro-Controller" : {
+            "ram" : 64000,
+            "speed" : 64e6,     
+        },
+        "DACs" : [
+            {
+                "pin" : 3,
+                "Vmax" : 3.3,
+                "max_freq" : 2000,
+            },
+            {
+                "pin" : 4,
+                "Vmax" : 3.3,
+                "max_freq" : 5000,
+            },
+        ],
+        "QFN64" : {},
     },
-    "user" : {
+    "datasheets" : [
+        "https://https://www.digikey.co.nz/",
+    ],
+    "suppliers" : [
+        "https://https://www.digikey.co.nz/",
+    ],
+    // user defined data, this is useful if you want your
+    // applaction to use things like custom images for your
+    // parts, or have notes for each of them,
+    // it is suggest each app uses its own name space for 
+    // custom data to avoid clashes 
+    "custom_data" : {
+
         // just as an example of what could be added here
-        "notes" : "these caps are quite leaky",
-        ...
-    }
+        "CanSource.PartsFinder" : {
+            "quantity" : 10000,
+            "location" : "Shelf B15",
+            "notes" : "these are kinda slow",
+            "search_tags" : [
+                "SMD",
+                "0603",
+            ]
+        }
+    },
 }
 ```
