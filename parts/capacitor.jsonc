@@ -1,48 +1,48 @@
 {
-        "Capacitance": "Farad",
-        "Tolerance" : "percentage",
-        "Rated-voltage": "Volt",
-        "Max-voltage": "Volt",
-        "Operating-Temperature" : "c",
-        //Class 2 per EIA RS-198
-        "Temp-Coefficient" : [
-            // low temp
-            "X",
-            "Y",
-            "Z",
-            
-            // high temp
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+    "Capacitance": "Farad",
+    "Tolerance" : "percentage",
+    "Rated-voltage": "Volt",
+    "Max-voltage": "Volt",
+    "Operating-Temperature" : "c",
+    //Class 2 per EIA RS-198
+    "Temp-Coefficient" : [
+        // low temp
+        "X",
+        "Y",
+        "Z",
+        
+        // high temp
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
 
-            //change of capacitance over the temp range
-            "P",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-        ],
-        "Failure-rate" : [
-            "M",
-            "P",
-            "R",
-            "S"
-        ],
-        "type" : [
-            "fixed",
-            "mica",
-            "paper",
-            "ceramic",
-            "Electrolytic",
-            "Tantalum",
-            "Film",
-            "Thin-Film",
-            "polyester",
-            "aluminum",
-        ],
+        //change of capacitance over the temp range
+        "P",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+    ],
+    "Failure-rate" : [
+        "M",
+        "P",
+        "R",
+        "S"
+    ],
+    "type" : [
+        "fixed",
+        "mica",
+        "paper",
+        "ceramic",
+        "Electrolytic",
+        "Tantalum",
+        "Film",
+        "Thin-Film",
+        "polyester",
+        "aluminum",
+    ],
 }
