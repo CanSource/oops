@@ -14,19 +14,24 @@ application to add its own application specific parameters.
 
 Conceptual syntax
 
-```json
-part {
-    part_number = "XYZ123",
-    type = "Capacitor",
-    tags = {
+```jsonc 
+// part
+{
+    "part_number" : "XYZ123",
+    "type" : "Capacitor",
+    "tags" : [
         "Tantalum",
-        "SMD"
-    },
-    parameters = {
+        "SMD",
+    ],
+    "parameters" : {
         // Values required by capacitor, tantalum, and SMD specs
+        "capacitance" : 1e-6, // micro farad
+        ...
     },
-    user = {
-        // Application specific parameters
+    "user" : {
+        // just as an example of what could be added here
+        "notes" : "these caps are quite leaky",
+        ...
     }
 }
 ```
