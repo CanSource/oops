@@ -15,6 +15,29 @@
             "description": "the current rating of the inductor unit : Amps",
             "type" : "number"
         },
+        "DC-resistance" : {
+            "description": "the resistance at dc : ohm",
+            "type" : "number"
+        },
+        "Q" : {
+            "description" : "operating frequency f is defined as the ratio of the reactance of the coil",
+            "type" : "object",
+            "properties" : {
+                "Q" : {
+                    "description" : "unitless",
+                    "type" : "number"
+                },
+                "freq" : {
+                    "description" : "unit : hertz",
+                    "type" : "number"
+                }
+            },
+            "required" : ["Q", "freq"]
+        },
+        "Self-Resonant" : {
+            "description" : "frequency at which the parasitic capacitance of the inductor resonates with the ideal inductance of the inductor unit : hertz",
+            "type" : "number"
+        },
         "Saturation" : {
             "description": "the saturation current of the inductor unit : Amps",
             "type" : "number"
@@ -58,6 +81,9 @@
                 "polymer",
                 "sendust"
             ]
+        },
+        "Operating-Temperature" : {
+            "$ref" : "../utils/operating-temperature.json"
         }
     },
     "required" : ["Inductance"]
