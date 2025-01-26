@@ -1,0 +1,11 @@
+{
+    "title" : "Failure-rate",
+    "description" : "the failure rate \n-\tM : 1%, \n-\tP : 0.1%, \n-\tR : 0.01%, \n-\tS : 0.001%",
+    "type": "string",
+    "enum" : [
+        "M",
+        "P",
+        "R",
+        "S"
+    ]
+}
