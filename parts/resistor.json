@@ -19,20 +19,6 @@
             "description": "specific resistance with change of temperature unit : ppm/c",
             "type" : "number"
         },
-        "Operating-Temperature" : {
-            "type": "object",
-            "properties": {
-              "min": {
-                "description" : "the minimum operating temperature units : c",
-                "type": "number"
-              },
-              "max": {
-                "description" : "the maximum operating temperature units : c",
-                "type": "number"
-              }
-            },
-            "required": [ "min", "max" ]
-        },
         "Composition" : {
             "description" : "the composition of the resistor",
             "type": "string",
@@ -50,15 +36,11 @@
                 "fusible"
             ]
         },
+        "Operating-Temperature" : {
+            "$ref" : "../utils/operating-temperature.json"
+        },
         "Failure-rate" : {
-            "description" : "the failure rate \n-\tM : 1%, \n-\tP : 0.1%, \n-\tR : 0.01%, \n-\tS : 0.001%",
-            "type": "string",
-            "enum" : [
-                "M",
-                "P",
-                "R",
-                "S"
-            ]
+            "$ref" : "../utils/failure-rate.json" 
         }
     },
     "required" : [

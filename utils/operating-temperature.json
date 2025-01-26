@@ -1,0 +1,16 @@
+{
+    "title" : "Operating-Temperature", 
+    "description" : "the min and max operating temperature that the part requires",
+    "type": "object",
+    "properties": {
+        "min": {
+        "description" : "the minimum operating temperature units : c",
+        "type": "number"
+        },
+        "max": {
+        "description" : "the maximum operating temperature units : c",
+        "type": "number"
+        }
+    },
+    "required": [ "min", "max" ]
+}

@@ -21,18 +21,7 @@
             "type" : "number"
         },
         "Operating-Temperature" : {
-            "type": "object",
-            "properties": {
-              "min": {
-                "description" : "the minimum operating temperature units : c",
-                "type": "number"
-              },
-              "max": {
-                "description" : "the maximum operating temperature units : c",
-                "type": "number"
-              }
-            },
-            "required": [ "min", "max" ]
+            "$ref" : "../utils/operating-temperature.json"
         },
         "Temp-Coefficient" : {
             "description": "the temp coefficient of the capacitor using Class 2 per EIA RS-198 standard",
@@ -40,14 +29,7 @@
             "pattern" : "^([XYZ][456789][PRSTUV])"
         },
         "Failure-rate" : {
-            "description" : "the failure rate \n-\tM : 1%, \n-\tP : 0.1%, \n-\tR : 0.01%, \n-\tS : 0.001%",
-            "type": "string",
-            "enum" : [
-                "M",
-                "P",
-                "R",
-                "S"
-            ]
+            "$ref" : "../utils/failure-rate.json" 
         },
         "type" : {
             "description" : "the type of the capacitor",
